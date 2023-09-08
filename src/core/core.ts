@@ -8,7 +8,7 @@ async function unsafeInstantiate(module: any, url: string) {
       // Exception for Deno fresh framework
       url: new URL(
         url,
-        `https://deno.land/x/lucid@${packageJson.version}/src/core/libs/`,
+        `https://deno.land/x/lucid@${packageJson.version.slice(0, packageJson.version.indexOf('-'))}/src/core/libs/`,
       ),
     });
   } catch (_e) {
